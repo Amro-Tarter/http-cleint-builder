@@ -1,0 +1,42 @@
+HTTP Client Execution Guide
+Compilation
+bash
+Copy
+gcc client.c -o client
+Basic Usage
+bash
+Copy
+./client <URL>
+Example:
+
+bash
+Copy
+./client http://example.com/path
+Advanced Usage
+bash
+Copy
+./client [-r n <param1=value1 param2=value2 ...>] <URL>
+Example with parameters:
+
+bash
+Copy
+./client -r 2 id=123 sort=asc http://example.com/api
+Features
+Supports HTTP (not HTTPS)
+
+Handles up to 10 redirects
+
+Saves binary responses (like images) as "meow.png"
+
+Shows response headers and total bytes received
+
+Notes
+The program will exit if:
+
+The URL isn't HTTP (no HTTPS support)
+
+More than 10 redirects occur
+
+Any network errors happen
+
+For binary responses, check "meow.png" in your working directory
